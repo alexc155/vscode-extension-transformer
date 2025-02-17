@@ -1,272 +1,290 @@
 {
-    "name": "transformer",
-    "displayName": "Transformer",
-    "description": "Filter, Sort, Unique, Reverse, Align, CSV, Line Selection and more text Transformations",
-    "version": "1.12.1",
-    "icon": "transformer-icon.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dakaraphi/vscode-extension-transformer"
-    },
-    "publisher": "dakara",
-    "engines": {
-        "vscode": "^1.58.0"
-    },
-    "categories": [
-        "Other"
+  "name": "transformer",
+  "displayName": "Transformer",
+  "description": "Filter, Sort, Unique, Reverse, Align, CSV, Line Selection and more text Transformations",
+  "version": "1.12.1",
+  "icon": "transformer-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexc155/vscode-extension-transformer"
+  },
+  "publisher": "alexc55",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:alexc155-internal.command",
+    "onCommand:alexc155-transformer.JsonAsText",
+    "onCommand:alexc155-transformer.alignCSV",
+    "onCommand:alexc155-transformer.alignCursor",
+    "onCommand:alexc155-transformer.commands",
+    "onCommand:alexc155-transformer.compactCSV",
+    "onCommand:alexc155-transformer.copyToNewDocument",
+    "onCommand:alexc155-transformer.countUniqueLinesNewDocument",
+    "onCommand:alexc155-transformer.escapes",
+    "onCommand:alexc155-transformer.filter",
+    "onCommand:alexc155-transformer.filterAsNewDocument",
+    "onCommand:alexc155-transformer.joinLines",
+    "onCommand:alexc155-transformer.linesAsJSON",
+    "onCommand:alexc155-transformer.macroCreate",
+    "onCommand:alexc155-transformer.macroDelete",
+    "onCommand:alexc155-transformer.macroEdit",
+    "onCommand:alexc155-transformer.macroRepeat",
+    "onCommand:alexc155-transformer.macroRun",
+    "onCommand:alexc155-transformer.normalizeDiacriticalMarks",
+    "onCommand:alexc155-transformer.randomLines",
+    "onCommand:alexc155-transformer.randomSelections",
+    "onCommand:alexc155-transformer.reverseLines",
+    "onCommand:alexc155-transformer.reverseSelections",
+    "onCommand:alexc155-transformer.rotateBackwardSelections",
+    "onCommand:alexc155-transformer.rotateForwardSelections",
+    "onCommand:alexc155-transformer.selectHighlights",
+    "onCommand:alexc155-transformer.selectLines",
+    "onCommand:alexc155-transformer.selectionAsJSON",
+    "onCommand:alexc155-transformer.sortByLineLength",
+    "onCommand:alexc155-transformer.sortLines",
+    "onCommand:alexc155-transformer.sortSelections",
+    "onCommand:alexc155-transformer.splitLines",
+    "onCommand:alexc155-transformer.splitLinesBeforeDelimiter",
+    "onCommand:alexc155-transformer.splitLinesAfterDelimiter",
+    "onCommand:alexc155-transformer.trimLines",
+    "onCommand:alexc155-transformer.trimSelections",
+    "onCommand:alexc155-transformer.uniqueLines",
+    "onCommand:alexc155-transformer.uniqueLinesNewDocument",
+    "onCommand:alexc155-transformer.loremIpsum",
+    "onCommand:alexc155-transformer.convertToMarkdownTable",
+    "onCommand:alexc155-transformer.showSnippets"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "alexc155-transformer.sortLines",
+        "title": "Sort Lines",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.sortSelections",
+        "title": "Sort Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.filterAsNewDocument",
+        "title": "Filter Lines As New Document...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-internal.command",
+        "title": "internal use only",
+        "category": "Transform-Internal"
+      },
+      {
+        "command": "alexc155-transformer.filter",
+        "title": "Filter Lines...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.reverseLines",
+        "title": "Reverse Lines",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.reverseSelections",
+        "title": "Reverse Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.alignCursor",
+        "title": "Align To Cursor",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.alignCSV",
+        "title": "Align CSV",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.compactCSV",
+        "title": "Compact CSV",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.commands",
+        "title": "List All Commands",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.uniqueLines",
+        "title": "Unique Lines",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.uniqueLinesNewDocument",
+        "title": "Unique Lines As New Document",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.sortByLineLength",
+        "title": "Sort Lines By Length",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.countUniqueLinesNewDocument",
+        "title": "Count Duplicate Lines As New Document",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.copyToNewDocument",
+        "title": "Copy To New Document",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.selectLines",
+        "title": "Select Full Lines (of all current selections)",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.selectHighlights",
+        "title": "Select Highlights (make selections of all highlighted text)",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.linesAsJSON",
+        "title": "Lines As JSON String Array",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.selectionAsJSON",
+        "title": "Selection As JSON String",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.JsonAsText",
+        "title": "JSON String As Text",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.trimLines",
+        "title": "Trim Lines",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.trimSelections",
+        "title": "Trim Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.escapes",
+        "title": "Encode / Decode ...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.randomLines",
+        "title": "Randomize Lines",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.randomSelections",
+        "title": "Randomize Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.joinLines",
+        "title": "Join Lines...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.splitLines",
+        "title": "Split Lines...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.splitLinesBeforeDelimiter",
+        "title": "Split Lines Before...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.splitLinesAfterDelimiter",
+        "title": "Split Lines After...",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.rotateForwardSelections",
+        "title": "Rotate Forward Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.rotateBackwardSelections",
+        "title": "Rotate Backward Selections",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.normalizeDiacriticalMarks",
+        "title": "Normalize Diacritical Marks (remove accents)",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.loremIpsum",
+        "title": "Lorem Ipsum",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.convertToMarkdownTable",
+        "title": "Convert To Markdown Table",
+        "category": "Transform"
+      },
+      {
+        "command": "alexc155-transformer.showSnippets",
+        "title": "Show Snippets",
+        "category": "Transform"
+      }
     ],
-    "activationEvents": [
-        "onCommand:dakara-internal.command",
-        "onCommand:dakara-transformer.JsonAsText",
-        "onCommand:dakara-transformer.alignCSV",
-        "onCommand:dakara-transformer.alignCursor",
-        "onCommand:dakara-transformer.commands",
-        "onCommand:dakara-transformer.compactCSV",
-        "onCommand:dakara-transformer.copyToNewDocument",
-        "onCommand:dakara-transformer.countUniqueLinesNewDocument",
-        "onCommand:dakara-transformer.escapes",
-        "onCommand:dakara-transformer.filter",
-        "onCommand:dakara-transformer.filterAsNewDocument",
-        "onCommand:dakara-transformer.joinLines",
-        "onCommand:dakara-transformer.linesAsJSON",
-        "onCommand:dakara-transformer.macroCreate",
-        "onCommand:dakara-transformer.macroDelete",
-        "onCommand:dakara-transformer.macroEdit",
-        "onCommand:dakara-transformer.macroRepeat",
-        "onCommand:dakara-transformer.macroRun",
-        "onCommand:dakara-transformer.normalizeDiacriticalMarks",
-        "onCommand:dakara-transformer.randomLines",
-        "onCommand:dakara-transformer.randomSelections",
-        "onCommand:dakara-transformer.reverseLines",
-        "onCommand:dakara-transformer.reverseSelections",
-        "onCommand:dakara-transformer.rotateBackwardSelections",
-        "onCommand:dakara-transformer.rotateForwardSelections",
-        "onCommand:dakara-transformer.selectHighlights",
-        "onCommand:dakara-transformer.selectLines",
-        "onCommand:dakara-transformer.selectionAsJSON",
-        "onCommand:dakara-transformer.sortByLineLength",
-        "onCommand:dakara-transformer.sortLines",
-        "onCommand:dakara-transformer.sortSelections",
-        "onCommand:dakara-transformer.splitLines",
-        "onCommand:dakara-transformer.splitLinesBeforeDelimiter",
-        "onCommand:dakara-transformer.splitLinesAfterDelimiter",
-        "onCommand:dakara-transformer.trimLines",
-        "onCommand:dakara-transformer.trimSelections",
-        "onCommand:dakara-transformer.uniqueLines",
-        "onCommand:dakara-transformer.uniqueLinesNewDocument"
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "alexc155-internal.command",
+          "when": "false"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "macro",
+        "aliases": [
+          "macro"
+        ],
+        "extensions": [
+          ".macro"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "dakara-transformer.sortLines",
-                "title": "Sort Lines",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.sortSelections",
-                "title": "Sort Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.filterAsNewDocument",
-                "title": "Filter Lines As New Document...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-internal.command",
-                "title": "internal use only",
-                "category": "Transform-Internal"
-            },
-            {
-                "command": "dakara-transformer.filter",
-                "title": "Filter Lines...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.reverseLines",
-                "title": "Reverse Lines",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.reverseSelections",
-                "title": "Reverse Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.alignCursor",
-                "title": "Align To Cursor",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.alignCSV",
-                "title": "Align CSV",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.compactCSV",
-                "title": "Compact CSV",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.commands",
-                "title": "List All Commands",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.uniqueLines",
-                "title": "Unique Lines",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.uniqueLinesNewDocument",
-                "title": "Unique Lines As New Document",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.sortByLineLength",
-                "title": "Sort Lines By Length",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.countUniqueLinesNewDocument",
-                "title": "Count Duplicate Lines As New Document",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.copyToNewDocument",
-                "title": "Copy To New Document",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.selectLines",
-                "title": "Select Full Lines (of all current selections)",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.selectHighlights",
-                "title": "Select Highlights (make selections of all highlighted text)",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.linesAsJSON",
-                "title": "Lines As JSON String Array",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.selectionAsJSON",
-                "title": "Selection As JSON String",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.JsonAsText",
-                "title": "JSON String As Text",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.trimLines",
-                "title": "Trim Lines",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.trimSelections",
-                "title": "Trim Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.escapes",
-                "title": "Encode / Decode ...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.randomLines",
-                "title": "Randomize Lines",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.randomSelections",
-                "title": "Randomize Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.joinLines",
-                "title": "Join Lines...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.splitLines",
-                "title": "Split Lines...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.splitLinesBeforeDelimiter",
-                "title": "Split Lines Before...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.splitLinesAfterDelimiter",
-                "title": "Split Lines After...",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.rotateForwardSelections",
-                "title": "Rotate Forward Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.rotateBackwardSelections",
-                "title": "Rotate Backward Selections",
-                "category": "Transform"
-            },
-            {
-                "command": "dakara-transformer.normalizeDiacriticalMarks",
-                "title": "Normalize Diacritical Marks (remove accents)",
-                "category": "Transform"
-            }
-        ],
-        "menus": {
-            "commandPalette": [
-                {
-                    "command": "dakara-internal.command",
-                    "when": "false"
-                }
-            ]
-        },
-        "languages": [
-            {
-                "id": "macro",
-                "aliases": [
-                    "macro"
-                ],
-                "extensions": [
-                    ".macro"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "macro",
-                "scopeName": "source.macro",
-                "path": "./macro.tmLanguage"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "compile_common": "tsc -watch -p ../vscode-extension-common",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "@types/node": "^14.0.27",
-        "typescript": "^3.9.7",
-        "vscode": "^1.1.37"
-    },
-    "dependencies": {
-        "md5": "2.3.0",
-        "split-string": "6.1.0",
-        "vscode-extension-common": "file:../vscode-extension-common"
-    }
+    "grammars": [
+      {
+        "language": "macro",
+        "scopeName": "source.macro",
+        "path": "./macro.tmLanguage"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "typescript": "^3.9.7",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "lodash.orderby": "^4.6.0",
+    "md5": "2.3.0",
+    "natural-orderby": "2.0.3",
+    "split-string": "6.1.0"
+  }
 }

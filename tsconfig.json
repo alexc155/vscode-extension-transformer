@@ -1,12 +1,12 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2017",
-        "outDir": "out",
-        "sourceMap": true,
-        "baseUrl": "",
-        "paths": {
-            "vscode": ["node_modules/vscode"]
-        }
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": "out",
+    "sourceMap": true,
+    "baseUrl": "",
+    "paths": {
+      "vscode": ["node_modules/vscode"]
     }
+  }
 }
